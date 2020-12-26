@@ -13,12 +13,36 @@
     <!-- Awesome Fonts -->
     <script src="https://kit.fontawesome.com/9104124eba.js" crossorigin="anonymous"></script>
 
+    <!-- styles -->
+    <link rel="stylesheet" href="styles.css">
+
 </head>
 
 <body>
     <div class="navbar">
-        <a href="#" class="brand">MyName</a>
+        <a href="#" class="toggle" id="navHamburger">
+            <i class="fas fa-grip-lines"></i>
+        </a>
+
+        <a href="#" class="brand"> MyName</a>
+
+        <div class="left">
+            <a href="#" class="link">link1</a>
+            <a href="#" class="link">link2</a>
+
+        </div>
+
+        <div class="right">
+            <a href="#" class="link">link3</a>
+        </div>
     </div>
 </body>
+
+<script>
+    const navHamburger = document.querySelector('#navHamburger');
+    navHamburger.addEventListener('click', (e) => {
+        navHamburger.parentElement.classList.toggle('active');
+    })
+</script>
 
 </html>
